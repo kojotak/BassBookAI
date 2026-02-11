@@ -58,7 +58,7 @@ class BassBookApp {
             <div class="alert alert-warning">
                 <i class="fas fa-exclamation-triangle"></i> 
                 OAuth2 is not configured. 
-                <a href="/api/auth/status" class="alert-link">Check status</a>
+                <a href="/auth" class="alert-link">Check status</a>
             </div>
             <span class="navbar-text text-muted">Login not available</span>
         `;

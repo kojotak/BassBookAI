@@ -73,7 +73,7 @@ class VideoFormApp {
                     <i class="fas fa-exclamation-circle"></i>
                     <strong>Access Denied:</strong> This feature requires authentication.
                     <br>OAuth2 is not properly configured.
-                    <br>Please check the <a href="/api/auth/status" target="_blank">configuration status</a>
+                    <br>Please check the <a href="/auth" target="_blank">configuration status</a>
                     or consult the setup guide.
                 </div>
                 <div class="text-center mt-3">
