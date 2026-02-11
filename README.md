@@ -65,10 +65,10 @@ Form page allows to paste a youtube video URL. After that, the URL is parsed and
 
 ### header
 
-There is a header containing link to login using 3rd party providers (such as google and github). After login, tag column is visible with values stored by given user. Moreover, there is a link to the form page.
+There is a header containing link to login using 3rd party provider - github. After login, tag column is visible with values stored by given user. Moreover, there is a link to the form page.
 
 ## programming guide
 
-Make the google and github integration optional. If Oath is not set, allow the application to start without any error but disable user login.
+Make the github integration optional. If Oath is not set, allow the application to start without any error but disable user login.
 
 Do not use Lombok.
