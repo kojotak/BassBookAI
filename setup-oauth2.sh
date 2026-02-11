@@ -15,24 +15,20 @@ if [ "$1" = "oauth2" ]; then
         
         cat > oauth2-credentials.properties << 'EOF'
 # Please fill in your actual OAuth2 credentials
-# Google OAuth2
-GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
-GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_CLIENT_SECRET
-
-# GitHub OAuth2
+# GitHub OAuth2 only - Google integration removed
 GITHUB_CLIENT_ID=YOUR_GITHUB_CLIENT_ID
 GITHUB_CLIENT_SECRET=YOUR_GITHUB_CLIENT_SECRET
 EOF
         
-        echo "✅ Created oauth2-credentials.properties"
-        echo "📝 Please edit this file with your actual credentials"
-        echo
-        echo "📖 Setup Guide: OAUTH2_SETUP_GUIDE.md"
+    echo "✅ Created oauth2-credentials.properties"
+    echo "📝 Please edit this file with your actual GitHub credentials"
+    echo
+    echo "📖 Setup Guide: GITHUB_OAUTH2_SETUP.md"
         echo
         exit 0
     fi
 
-    echo "Loading OAuth2 credentials from oauth2-credentials.properties..."
+    echo "Loading GitHub OAuth2 credentials from oauth2-credentials.properties..."
     
     if mvn spring-boot:run -Dspring.profiles.active=oauth2; then
         echo "🚀 Application started successfully with OAuth2!"

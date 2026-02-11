@@ -14,7 +14,7 @@ mvn spring-boot:run
 ✅ Browse videos immediately  
 ❌ No login/add features
 
-### **Option 2: Full OAuth2 Mode**
+### **Option 2: Full GitHub OAuth2 Mode**
 ```bash
 # Set credentials first
 export GOOGLE_CLIENT_ID=your_google_client_id

@@ -74,9 +74,6 @@ class BassBookApp {
 
     showLoginOptions() {
         document.getElementById('auth-section').innerHTML = `
-            <a href="/oauth2/authorization/google" class="btn btn-outline-light me-2">
-                <i class="fab fa-google"></i> Login with Google
-            </a>
             <a href="/oauth2/authorization/github" class="btn btn-outline-light">
                 <i class="fab fa-github"></i> Login with GitHub
             </a>
