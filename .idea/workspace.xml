@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3191e726-4dca-4f7e-b9fc-3768eaeda884" name="Changes" comment="USER_LOGIN_ENHANCED" />
+    <list default="true" id="3191e726-4dca-4f7e-b9fc-3768eaeda884" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +48,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="39XWS87axSGsjeNHYsKTAyMzhCW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,6 +62,7 @@
     "Maven.bass-book-ai [clean].executor": "Run",
     "Maven.bass-book-ai [install].executor": "Run",
     "Maven.bass-book-ai [org.springframework.boot:spring-boot-maven-plugin:3.2.0:run].executor": "Run",
+    "Maven.bassbookai [org.springframework.boot:spring-boot-maven-plugin:3.2.0:run].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -118,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770842893441</updated>
       <workItem from="1770842894524" duration="5424000" />
-      <workItem from="1770848359754" duration="668000" />
+      <workItem from="1770848359754" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -176,21 +182,29 @@
       <option name="project" value="LOCAL" />
       <updated>1770847932031</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1770849603262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770849603262</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
     <MESSAGE value="compilation fix by removing lombok" />
     <MESSAGE value="fixed YouTubeService.java:[67,73] incompatible types: com.bassbook.service.YouTubeService.YouTubeApiResponse.VideoItem cannot be converted to com.bassbook.service.YouTubeService.YouTubeApiResponse.ChannelItem" />
     <MESSAGE value="fixed start without OAuth" />
     <MESSAGE value="removed google OAuth2 support" />
     <MESSAGE value="fixed HTTP 400 for /api/auth/config" />
     <MESSAGE value="USER_LOGIN_ENHANCED" />
-    <option name="LAST_COMMIT_MESSAGE" value="USER_LOGIN_ENHANCED" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
