@@ -61,10 +61,10 @@ public class YouTubeService {
             String url = YOUTUBE_API_BASE + "/channels?id=" + channelId + 
                         "&part=snippet&key=" + youtubeApiKey;
             
-            YouTubeApiResponse response = restTemplate.getForObject(url, YouTubeApiResponse.class);
+            YouTubeChannelApiResponse response = restTemplate.getForObject(url, YouTubeChannelApiResponse.class);
             
             if (response != null && response.items != null && !response.items.isEmpty()) {
-                YouTubeApiResponse.ChannelItem item = response.items.get(0);
+                YouTubeChannelApiResponse.ChannelItem item = response.items.get(0);
                 return convertToChannelInfo(item);
             }
         } catch (Exception e) {
@@ -99,7 +99,7 @@ public class YouTubeService {
         return info;
     }
 
-    private YouTubeChannelInfo convertToChannelInfo(YouTubeApiResponse.ChannelItem item) {
+    private YouTubeChannelInfo convertToChannelInfo(YouTubeChannelApiResponse.ChannelItem item) {
         YouTubeChannelInfo info = new YouTubeChannelInfo();
         info.channelId = item.id;
         info.title = item.snippet.title;
@@ -119,6 +119,7 @@ public class YouTubeService {
         public String title;
     }
 
+    // Response class for video API
     private static class YouTubeApiResponse {
         public java.util.List<VideoItem> items;
         
@@ -127,16 +128,21 @@ public class YouTubeService {
             public VideoSnippet snippet;
         }
         
-        public static class ChannelItem {
-            public String id;
-            public ChannelSnippet snippet;
-        }
-        
         public static class VideoSnippet {
             public String title;
             public String channelTitle;
             @JsonProperty("channelId")
             public String channelId;
+        }
+    }
+
+    // Response class for channel API
+    private static class YouTubeChannelApiResponse {
+        public java.util.List<ChannelItem> items;
+        
+        public static class ChannelItem {
+            public String id;
+            public ChannelSnippet snippet;
         }
         
         public static class ChannelSnippet {
