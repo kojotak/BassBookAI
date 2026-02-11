@@ -20,14 +20,27 @@ class BassBookApp {
 
     async checkAuthStatus() {
         try {
+            // First check if OAuth2 is configured
+            const authConfigResponse = await fetch('/api/auth/config');
+            const authConfig = await authConfigResponse.json();
+            
+            if (!authConfig.oauth2Configured) {
+                this.showOAuth2NotConfigured();
+                return;
+            }
+
+            // OAuth2 is configured, check user status
             const response = await fetch('/api/user/info');
             if (response.ok) {
                 const user = await response.json();
                 this.isAuthenticated = true;
                 this.showUserInfo(user);
+            } else {
+                this.showLoginOptions();
             }
         } catch (error) {
-            console.log('User not authenticated');
+            console.log('Auth check failed:', error);
+            this.showLoginOptions();
         }
     }
 
@@ -38,6 +51,38 @@ class BassBookApp {
         document.getElementById('tag-header').style.display = 'table-cell';
         
         this.currentFilters.userId = user.sub;
+    }
+
+    showOAuth2NotConfigured() {
+        document.getElementById('auth-section').innerHTML = `
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i> 
+                OAuth2 is not configured. 
+                <a href="/api/auth/status" class="alert-link">Check status</a>
+            </div>
+            <span class="navbar-text text-muted">Login not available</span>
+        `;
+        document.getElementById('user-section').style.display = 'none';
+        document.getElementById('tag-header').style.display = 'none';
+        
+        // Disable form page link if it exists
+        const formLink = document.querySelector('a[href="/form.html"]');
+        if (formLink) {
+            formLink.style.display = 'none';
+        }
+    }
+
+    showLoginOptions() {
+        document.getElementById('auth-section').innerHTML = `
+            <a href="/oauth2/authorization/google" class="btn btn-outline-light me-2">
+                <i class="fab fa-google"></i> Login with Google
+            </a>
+            <a href="/oauth2/authorization/github" class="btn btn-outline-light">
+                <i class="fab fa-github"></i> Login with GitHub
+            </a>
+        `;
+        document.getElementById('user-section').style.display = 'none';
+        document.getElementById('tag-header').style.display = 'none';
     }
 
     async loadEnums() {

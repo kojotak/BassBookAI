@@ -17,17 +17,71 @@ class VideoFormApp {
 
     async checkAuthStatus() {
         try {
+            // First check if OAuth2 is configured
+            const authConfigResponse = await fetch('/api/auth/config');
+            const authConfig = await authConfigResponse.json();
+            
+            if (!authConfig.oauth2Configured) {
+                this.showOAuth2NotConfigured();
+                return;
+            }
+
+            // OAuth2 is configured, check user status
             const response = await fetch('/api/user/info');
             if (!response.ok) {
-                window.location.href = '/';
+                this.showLoginRequired();
                 return;
             }
             const user = await response.json();
             document.getElementById('username').textContent = user.name;
             document.getElementById('user-section').style.display = 'flex';
         } catch (error) {
-            console.log('User not authenticated, redirecting...');
-            window.location.href = '/';
+            console.log('Auth check failed:', error);
+            this.showLoginRequired();
+        }
+    }
+
+    showOAuth2NotConfigured() {
+        document.getElementById('user-section').innerHTML = `
+            <span class="navbar-text text-warning">
+                <i class="fas fa-exclamation-triangle"></i> 
+                OAuth2 not configured - Login unavailable
+            </span>
+        `;
+        
+        // Disable form functionality
+        this.disableForm();
+    }
+
+    showLoginRequired() {
+        document.getElementById('user-section').innerHTML = `
+            <span class="navbar-text">
+                <i class="fas fa-lock"></i> 
+                <a href="/" style="color: white;">Login required</a>
+            </span>
+        `;
+        
+        // Disable form functionality
+        this.disableForm();
+    }
+
+    disableForm() {
+        const form = document.getElementById('video-form');
+        if (form) {
+            form.innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <strong>Access Denied:</strong> This feature requires authentication.
+                    <br>OAuth2 is not properly configured.
+                    <br>Please check the <a href="/api/auth/status" target="_blank">configuration status</a>
+                    or consult the setup guide.
+                </div>
+                <div class="text-center mt-3">
+                    <a href="/" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            `;
         }
     }
 
