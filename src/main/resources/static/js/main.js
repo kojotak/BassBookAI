@@ -6,6 +6,7 @@ class BassBookApp {
         this.currentFilters = {};
         this.expandedRow = null;
         this.isAuthenticated = false;
+        this.currentUser = null;
         
         this.init();
     }
@@ -47,10 +48,37 @@ class BassBookApp {
     showUserInfo(user) {
         document.getElementById('auth-section').style.display = 'none';
         document.getElementById('user-section').style.display = 'flex';
-        document.getElementById('username').textContent = user.name;
-        document.getElementById('tag-header').style.display = 'table-cell';
+        
+        // Update username display
+        const usernameElement = document.getElementById('username');
+        if (usernameElement) {
+            usernameElement.textContent = user.name;
+        }
+        
+        // Update user section to show name and logout
+        const userSection = document.getElementById('user-section');
+        if (userSection) {
+            userSection.innerHTML = `
+                <span id="username" class="navbar-text me-3">${this.escapeHtml(user.name)}</span>
+                <a href="/form.html" class="btn btn-primary me-2">
+                    <i class="fas fa-plus"></i> Add Video
+                </a>
+                <a href="/logout" class="btn btn-outline-light">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            `;
+        }
+        
+        // Enable tag column for logged-in users
+        const tagHeader = document.getElementById('tag-header');
+        if (tagHeader) {
+            tagHeader.style.display = 'table-cell';
+        }
         
         this.currentFilters.userId = user.sub;
+        
+        // Store user info for logout functionality
+        this.currentUser = user;
     }
 
     showOAuth2NotConfigured() {
@@ -448,6 +476,32 @@ class BassBookApp {
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
         };
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    logout() {
+        // Clear current user state
+        this.currentUser = null;
+        this.isAuthenticated = false;
+        
+        // Redirect to logout endpoint
+        fetch('/logout', { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    // Force page reload to clear any remaining state
+                    window.location.href = '/';
+                }
+            })
+            .catch(error => {
+                console.error('Logout error:', error);
+                // Fallback: reload page anyway
+                window.location.href = '/';
+            });
     }
 }
 

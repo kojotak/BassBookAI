@@ -11,14 +11,6 @@ public class AuthService {
     private Environment environment;
 
     public boolean isOAuth2Configured() {
-        String[] activeProfiles = environment.getActiveProfiles();
-        if (activeProfiles != null) {
-            for (String profile : activeProfiles) {
-                if ("oauth2".equals(profile)) {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return true;
     }
 }

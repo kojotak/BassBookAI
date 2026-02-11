@@ -4,6 +4,8 @@ class VideoFormApp {
         this.currentArtist = null;
         this.currentSong = null;
         this.enums = {};
+        this.isAuthenticated = false;
+        this.currentUser = null;
         
         this.init();
     }
@@ -13,6 +15,7 @@ class VideoFormApp {
         this.loadEnums();
         this.loadArtists();
         this.setupEventListeners();
+        this.setupLogoutListener();
     }
 
     async checkAuthStatus() {
@@ -170,6 +173,36 @@ class VideoFormApp {
         document.getElementById('save-song-btn').addEventListener('click', () => this.saveSong());
 
         document.getElementById('video-form').addEventListener('submit', (e) => this.saveVideo(e));
+    }
+
+    setupLogoutListener() {
+        // Add logout functionality to existing logout button
+        const logoutButton = document.getElementById('logout-btn');
+        if (logoutButton) {
+            logoutButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.logout();
+            });
+        }
+    }
+
+    logout() {
+        // Clear current user state
+        this.isAuthenticated = false;
+        
+        // Redirect to logout endpoint
+        fetch('/logout', { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    // Force page reload to clear any remaining state
+                    window.location.href = '/';
+                }
+            })
+            .catch(error => {
+                console.error('Logout error:', error);
+                // Fallback: reload page anyway
+                window.location.href = '/';
+            });
     }
 
     async parseYouTubeUrl() {

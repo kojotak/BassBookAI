@@ -9,7 +9,6 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-@Profile("oauth2")
 public class OAuth2SecurityConfig {
 
     @Bean
