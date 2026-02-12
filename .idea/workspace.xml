@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3191e726-4dca-4f7e-b9fc-3768eaeda884" name="Changes" comment="updated readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/tomas/IdeaProjects/BassBookAI" value="39XWS87axSGsjeNHYsKTAyMzhCW" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kojotak&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kojotak/BassBookAI.git&quot;,
+    &quot;accountId&quot;: &quot;47c9357b-e161-4145-9d73-ba937f59c1c3&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="39XWS87axSGsjeNHYsKTAyMzhCW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Maven.bass-book-ai [clean,install].executor": "Run",
+    "Maven.bass-book-ai [clean].executor": "Run",
+    "Maven.bass-book-ai [install].executor": "Run",
+    "Maven.bass-book-ai [org.springframework.boot:spring-boot-maven-plugin:3.2.0:run].executor": "Run",
+    "Maven.bassbookai [org.springframework.boot:spring-boot-maven-plugin:3.2.0:run].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BassBookAiApplication.executor": "Run",
+    "git-widget-placeholder": "openCode/qwen3-30b-a3b-2507",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecapUselessUpdatesCounter">
+    <option name="suspendCountdown" value="7" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.BassBookAiApplication">
+    <configuration name="BassBookAiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="bassbookai" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bassbookai.BassBookAiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BassBookAiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="GITHUB_CLIENT_ID" value="Ov23li4dfSVmQar0Kc92" />
+        <env name="GITHUB_CLIENT_SECRET" value="f95ff4e89c3428b6b9ca91e2caa261e93a3d15e7" />
+      </envs>
+      <module name="bass-book-ai" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bassbook.BassBookAiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3191e726-4dca-4f7e-b9fc-3768eaeda884" name="Changes" comment="" />
+      <created>1770842893441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770842893441</updated>
+      <workItem from="1770842894524" duration="5424000" />
+      <workItem from="1770848359754" duration="1318000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1770844296950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770844296950</updated>
+    </task>
+    <task id="LOCAL-00002" summary="compilation fix by removing lombok">
+      <option name="closed" value="true" />
+      <created>1770844888687</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770844888687</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed YouTubeService.java:[67,73] incompatible types: com.bassbook.service.YouTubeService.YouTubeApiResponse.VideoItem cannot be converted to com.bassbook.service.YouTubeService.YouTubeApiResponse.ChannelItem">
+      <option name="closed" value="true" />
+      <created>1770845138337</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770845138337</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed start without OAuth">
+      <option name="closed" value="true" />
+      <created>1770846053514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770846053514</updated>
+    </task>
+    <task id="LOCAL-00005" summary="removed google OAuth2 support">
+      <option name="closed" value="true" />
+      <created>1770846790811</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770846790811</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed HTTP 400 for /api/auth/config">
+      <option name="closed" value="true" />
+      <created>1770846985267</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770846985267</updated>
+    </task>
+    <task id="LOCAL-00007" summary="USER_LOGIN_ENHANCED">
+      <option name="closed" value="true" />
+      <created>1770847932031</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1770847932031</updated>
+    </task>
+    <task id="LOCAL-00008" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1770849603262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770849603262</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated readme">
+      <option name="closed" value="true" />
+      <created>1770849740771</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770849740771</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="compilation fix by removing lombok" />
+    <MESSAGE value="fixed YouTubeService.java:[67,73] incompatible types: com.bassbook.service.YouTubeService.YouTubeApiResponse.VideoItem cannot be converted to com.bassbook.service.YouTubeService.YouTubeApiResponse.ChannelItem" />
+    <MESSAGE value="fixed start without OAuth" />
+    <MESSAGE value="removed google OAuth2 support" />
+    <MESSAGE value="fixed HTTP 400 for /api/auth/config" />
+    <MESSAGE value="USER_LOGIN_ENHANCED" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="updated readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

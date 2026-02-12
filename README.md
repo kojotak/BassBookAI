@@ -1,4 +1,8 @@
-# Bass Book AI
+# Bass Book 
+
+## implementation
+
+Using local LM studio with model qwen3-30b-a3b-2507
 
 Create a web application in java for storing play along videos on youtube for the bass guiter.
 
